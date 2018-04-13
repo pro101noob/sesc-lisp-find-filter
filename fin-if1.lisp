@@ -1,0 +1,5 @@
+(defun find-if1 ( predicate sequence ) 
+(cond ((listp sequence) (cond ((neq (funcall predicate (car sequence)) nil) (car sequence)) 
+(T find-if1 predicate (cdr sequence)))) 
+(T nil)) 
+)
